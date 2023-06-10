@@ -45,6 +45,3 @@ This directory contains *Data Structures* in  python programming language
 ### 13. Linked list palindrome
 - Write a function in C that checks if a singly linked list is a palindrome.
 
-### 13. Linked list palindrome
-- Create a C function that prints some basic info about Python lists.
-
