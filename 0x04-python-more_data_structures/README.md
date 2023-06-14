@@ -42,14 +42,3 @@ his directory contains *Data Structures* in  python programming language
 ### 12. Roman to Integer
 - Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
 
-### 13. Weighted average!
-- Write a function that returns the weighted average of all integers tuple (<score>, <weight>)
-
-### 14. Squared by using map
-- Write a function that computes the square value of all integers of a matrix using map
-
-### 15. Delete by value
-- Write a function that deletes keys with a specific value in a dictionary.
-
-### 16. CPython #1: PyBytesObject
-- Create two C functions that print some basic info about Python lists and Python bytes objects.
