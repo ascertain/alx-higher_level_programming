@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def roman_to_int(self, s):
+def roman_to_int(s):
     roman = {
         "I": 1,
         "V": 5,
