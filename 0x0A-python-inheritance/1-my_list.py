@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-''' Module: 1-my_list
-'''
+"""
+contains the MyList class
+"""
 
 
 class MyList(list):
-    ''' Represents a MyList
-    '''
+    """Implements sorted printing for the built-in list class."""
 
     def print_sorted(self):
-        '''
-        prints the list, but sorted
-        '''
+        """Print a list in sorted ascending order."""
         print(sorted(self))
