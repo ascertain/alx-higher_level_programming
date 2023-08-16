@@ -1,9 +1,8 @@
--- Create the database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
+-- creates the MySQL server user user_0d_1
+-- should have all privileges
+-- password should be set to user_0d_1_pwd
+-- if user_0d_1 already exists, script should not fail
 
--- Create the user if it doesn't exist
-CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
-
--- Grant USAGE and SELECT privileges to the user on the specified database
-GRANT USAGE ON *.* TO 'user_0d_2'@'localhost';
-GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
+FLUSH PRIVILEGES;
