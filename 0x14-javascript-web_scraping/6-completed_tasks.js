@@ -1,16 +1,21 @@
 #!/usr/bin/node
+
 const request = require('request');
-request(process.argv[2], function (error, response, body) {
-  if (!error) {
+
+request(process.argv[2], (err, res, body) => {
+  if (err) {
+    console.log(err);
+  } else {
     const todos = JSON.parse(body);
-    let completed = {};
+    const report = {};
     todos.forEach((todo) => {
-      if (todo.completed && completed[todo.userId] === undefined) {
-        completed[todo.userId] = 1;
-      } else if (todo.completed) {
-        completed[todo.userId] += 1;
+      if (todo.completed) {
+        if (!report[todo.userId]) {
+          report[todo.userId] = 0;
+        }
+        report[todo.userId]++;
       }
     });
-    console.log(completed);
+    console.log(report);
   }
 });
