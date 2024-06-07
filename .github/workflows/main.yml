@@ -16,5 +16,5 @@ jobs:
 
       - name: Use the secret
         env:
-          MAIN_SECRETS: ${{ secrets.MAIN_SECRETS }}
-        run: echo "The secret value is:" $MAIN_SECRETS
+          MAIN_SECRETS_REPO: ${{ secrets.MAIN_SECRETS_REPO }}
+        run: echo "The secret value is:" $MAIN_SECRETS_REPO
