@@ -11,6 +11,9 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
 
+      - name: Debug environment variables
+        run: printenv
+
       - name: Use the secret
         env:
           MAIN_SECRETS: ${{ secrets.MAIN_SECRETS }}
