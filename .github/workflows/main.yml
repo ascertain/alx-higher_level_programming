@@ -3,6 +3,10 @@ name: Fetch GCP Project ID (DEV)
 on:
   push: # Trigger on pushes to any branch
 
+env:
+  TARGET_ENV: 'main'
+  MAIN_SECRETS_REPO: ${{ secrets.MAIN_SECRETS_REPO }}
+
 jobs:
   build:
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner
@@ -15,6 +19,4 @@ jobs:
         run: printenv
 
       - name: Use the secret
-        env:
-          MAIN_SECRETS_REPO: ${{ secrets.MAIN_SECRETS_REPO }}
         run: echo "The secret value is:" $MAIN_SECRETS_REPO
