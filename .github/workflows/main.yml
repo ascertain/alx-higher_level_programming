@@ -14,4 +14,4 @@ jobs:
       - name: Use the secret
         env:
           MAIN_SECRETS: ${{ secrets.MAIN_SECRETS }}
-        run: echo "The secret value is: $MAIN_SECRETS"
+        run: echo "The secret value is: ${{ env.MAIN_SECRETS }}"
