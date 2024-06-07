@@ -1,0 +1,17 @@
+name: Fetch GCP Project ID (DEV)
+
+on:
+  push: # Trigger on pushes to any branch
+
+jobs:
+  configure-dev-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Echo GCP Project ID (DEV) (optional)
+        if: endsWith(github.ref, '/main')
+        env:
+          MAIN_SECRETS: ${{ secrets.MAIN_SECRETS }} # Access the secret
+        run: echo "GCP Project ID (DEV):" $MAIN_SECRETS  # Print for verification (remove for production)
